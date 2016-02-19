@@ -1,0 +1,495 @@
+{
+    "title":"Unit 0",
+    "ex0":
+    {
+	"question_prompt":"Write the plural form of these nouns.",
+	"example":
+	{
+	    "question":"One chair - Two _______.",
+	    "answer":"chairs"
+	}
+	"questions":
+	[
+	    {"q":"One car - Two ________",
+	     "a":"cars"},
+	    {"q":"One table - Two _______",
+	     "a":"tables"},
+	    {"q":"One man - Two _______",
+	     "a":"men"},
+	    {"q":"One woman - Two ________",
+	     "women"},
+	    {"q":"One foot - Two ________",
+	     "feet"},
+	    {"q":"One class - Two ________",
+	     "a":"classes"},
+	    {"q":"One person - Two ________",
+	     "a":"people"},
+	    {"q":"One watch - Two _______",
+	     "a":"watches"},
+	    {"q":"One box - Two ________",
+	     "a":"boxes"},
+	    {"q":"One city - Two ________",
+	     "a":"cities"},
+	    {"q":"One child - Two ________",
+	     "a":"children"},
+	    {"q":"One knife - Two ________",
+	     "a":"knives"},
+	    {"q":"One potato - Two ________",
+	     "a":"potatoes"},
+	    {"q":"One tomato - Two ________",
+	     "a":"tomatoes"},
+	    {"q":"One fish - Two _________",
+	     "a":"fish/fishes"},
+	    {"q":"One sheep - Two _________",
+	     "a":"sheep"},
+	    {"q":"One phone - Two _________",
+	     "a":"phones"},
+	    {"q":"One cup - Two _________",
+	     "a":"cups"},
+	    {"q":"One book - Two ________",
+	     "a":"books"},
+	    {"q":"One country - Two ________",
+	     "a":"countries"},
+	    {"q":"One world - Two ________",
+	     "a":"worlds"}
+	],
+	"help":"For most nouns you can make the plural form by adding 's' to the
+word./n
+e.g. car - cars./n
+For nouns ending in 'ss', 'x','ch' or 'sh' you make the plural form by adding 'es'./n
+e.g./n 
+'fox - foxes'/n
+For nouns ending in a consonant + 'y' you can make the plural form by removing the 'y' and adding 'ies'./n
+e.g./n
+penny - pennies/n
+Some nouns are irregular and you need to learn them individually./n
+e.g. man - men/n
+",
+	"helpurls":["http://www.edufind.com/english-grammar/plural-nouns/"]
+
+    },
+    
+    "ex1":    
+    {
+	"question_prompt":"Use the correct form of the verb 'be'.",
+	"example":
+	{
+	    "question":"She _______ a student.",
+	    "answer":"is"
+	},
+	"questions":
+	[
+
+	    {
+		"q":"He ________ a doctor.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"She ________ happy.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"They __________ my friends.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"It __________ hot today.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"You __________ beautiful.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"My friends ________ very funny.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"My brother's car ________ blue.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"Your mother _________ very kind.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"The people in the room _________ good students.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"There ________ lots of books on the shelf.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"I ________ a superstar.",
+		"a":"am"}
+	    ,
+	    {
+		"q":"My friends and I _________ good at English.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"Your sister, unlike her friends, _________ very hard working.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"The boys studying French __________ having lunch.",
+		"a":"are"}
+	    ,
+	    {
+		"q":"There ________ some water in the glass.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"Everyone __________ excited today.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"The internet ______ a wonderful thing.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"That _______ my favourite movie.",
+		"a":"is"}
+	    ,
+	    {
+		"q":"Who ________ your best friend?",
+		"a":"is"}
+	    ,
+	    {
+		"q":"Where __________ your brothers?",
+		"a":"are"}
+	],
+	"help":"Use 'am' with 'I'./n
+Use 'is' with 'he','she','it'/n
+Use 'are' with 'we,'us','you','they'./n
+Use 'is' with singular or uncountable subjects./n
+Use 'are' with plural subjects./n",
+	"helpurls":["http://www.grammar.cl/Present/To_Be.htm"]
+    },
+    "ex2":
+    {
+	"question_prompt":"Make the sentence negative.",
+	"example":{
+	    "question":"She is a student",
+	    "answer":"She is not a student"
+	},
+	"questions":
+	[	 
+	    {"q":"He is a doctor.",
+	     "a":"He is not a doctor./He isn't a doctor./He's not a doctor."},
+	    {"q":"She is happy.",
+	     "a":"She is not happy./She isn't happy./She's not happy."},
+	    {"q":"They are my friends.",
+	     "a":"They are not my friends./They aren't my friends./They're not my friends."},
+	    {"q":"It is hot today.",
+	     "a":"It is not hot today./It isn't hot today./It's not hot today."},
+	    {"q":"You are beautiful.",
+	     "a":"You are not beautiful./You aren't beautiful./You're not beautiful."},
+	    {"q":"My friends are very funny.",
+	     "a":"My friends are not very funny./My friends aren't very funny."},
+	    {"q":"My brother's car is blue.",
+	     "a":"My brother's car is not blue./My brother's car isn't blue."},
+	    {"q":"Your mother is very kind.",
+	     "a":"Your mother is not very kind./Your mother isn't very kind."},
+	    {"q":"The people in the room are good students.",
+	     "a":"The people in the room are not good students./The people in the room aren't good students."},
+	    {"q":"There are a lot of books on the shelf.",
+	     "a":"There are not a lot of books on the shelf./There aren't a lot of books on the shelf."},
+	    {"q":"I am a superstar.",
+	     "a":"I am not a superstar./I'm not a superstar."},
+	    {"q":"My friends and I are good at English.",
+	     "a":"My friends and I are not good at English./My friends and I aren't good at English."},
+	    {"q":"Your sister, unlike her friends, is very hard working.",
+	     "a":"Your sister, unlike her friends, is not very hard working./Your sister, unlike her friends, isn't very hard working."},
+	    {"q":"The boys studying French are having lunch.",
+	     "a":"The boys studying French are not having lunch./The boys studying French aren't having lunch."},
+	    {"q":"The water is in the glass.",
+	     "a":"The water is not in the glass./The water isn't in the glass."},
+	    {"q":"Simon is excited today.",
+	     "a":"Simon is not excited today./Simon isn't excited today."},
+	    {"q":"The internet is a wonderful thing.",
+	     "a":"The internet is not a wonderful thing./The internet isn't a wonderful thing."},
+	    {"q":"That is my favourite movie.",
+	     "a":"That is not my favourite movie./That isn't my favourite movie."},
+	    {"q":"Who is a police officer?",
+	     "a":"Who is not a police officer?/Who isn't a police officer?"},
+	    {"q":"What food is delicious?",
+	     "a":"What food is not delicious?/What food isn't delicious?"},
+	],
+	"help":"Add 'not' after 'am' 'is' or 'are'.",
+	"helpurls":"http://www.grammar.cl/Present/To_Be.htm"
+    },
+    "ex3":
+    {
+	"question_prompt":"Make the sentence into a yes/no question.",
+	"example":
+	{"question":"She is a student.",
+	 "answer":"Is she a student?"},
+	"questions":
+	[
+	    {"q":"He is a doctor.",
+	     "a":"Is he a doctor?"},
+	    {"q":"She is happy.",
+	     "a":"Is she happy?"},
+	    {"q":"They are my friends.",
+	     "a":"Are they my friends?/Are they your friends"},
+	    {"q":"It is hot today.",
+	     "a":"Is it hot today?"},
+	    {"q":"You are beautiful.",
+	     "a":"Are you beautiful?/Am I beautiful?"},
+	    {"q":"My friends are very funny.",
+	     "a":"Are my friends very funny? /Are your friends very funny?"},
+	    {"q":"My brother's car is blue.",
+	     "a":"Is my brother's car blue?/Is your brother's car blue?"},
+	    {"q":"Your mother is very kind.",
+	     "a":"Is your mother very kind?/Is my mother very kind?"},
+	    {"q":"The people in the room are good students.",
+	     "a":"Are the people in the room good students?"},
+	    {"q":"There are a lot of books on the shelf.",
+	     "a":"Are there a lot of books on the shelf?"},
+	    {"q":"I am a superstar.",
+	     "a":"Am I a superstar?/Are you a superstar?"},
+	    {"q":"My friends and I are good at English.",
+	     "a":"Are my friends and I good at English?/Are your friends and you good at English?"},
+	    {"q":"Your sister is very hard working.",
+	     "a":"Is your sister very hard working?/Is my sister very hard working?"},
+	    {"q":"The boys are having lunch.",
+	     "a":"Are the boys having lunch?"},
+	    {"q":"The water is in the glass.",
+	     "a":"Is the water in the glass?"},
+	    {"q":"Simon is excited today.",
+	     "a":"Is Simon excited today?"},
+	    {"q":"The internet is a wonderful thing.",
+	     "a":"Is the internet a wonderful thing?"},
+	    {"q":"That is my favourite movie.",
+	     "a":"Is that my favourite movie?/Is that your favourite movie?"},
+	    {"q":"He is a police officer.",
+	     "a":"Is he a police officer?"},
+	    {"q":"That food is delicious.",
+	     "a":"Is that food delicious?"}
+	],
+	"help":"To make a yes / no question with the verb 'be', move the verb to the begining of the sentence and change the full stop to a question mark.",
+	"helpurls":"http://www.grammar.cl/Present/To_Be.htm"
+    },
+    "ex4":
+    {
+	"question_prompt":"Use the correct form of 'have'.",
+	"example":
+	{"question":"She _____ a new phone.",
+	 "answer":"has"},
+	"questions":
+	[
+	    {"q":"I ______ two brothers.",
+	     "a":"have"},
+	    {"q":"He ______ a blue car.",
+	     "a":"has"},
+	    {"q":"Ali and Hamed _______ a class at 2pm.",
+	     "a":"have"},
+	    {"q":"You _____ long hair.",
+	     "a":"have"},
+	    {"q":"My sister _____ a lot of friends.",
+	     "a":"has"},
+	    {"q":"My friends ______ a lot of money.",
+	     "a":"have"},
+	    {"q":"Your aunt ______ a beautiful house.",
+	     "a":"has"},
+	    {"q":"Those dogs _______ sharp teeth.",
+	     "a":"have"},
+	    {"q":"Your teacher _______ a big nose.",
+	     "a":"has"},
+	    {"q":"I ________ an idea.",
+	     "a":"have"},
+	    {"q":"My phone _____ a cracked screen.",
+	     "a":"has"},
+	    {"q":"Julie _____ a terrible voice.",
+	     "a":"has"},
+	    {"q":"The students ______ headaches.",
+	     "a":"have"},
+	    {"q":"Laila _____ too much homework.",
+	     "a":"has"},
+	    {"q":"They _____ a meeting at 2pm.",
+	     "a":"have"},
+	    {"q":"John ____ a shower every morning.",
+	     "a":"has"},
+	    {"q":"My brother and I ______ eggs for breakfast.",
+	     "a":"have"},
+	    {"q":"Terry and Dana's house _____ a lovely garden.",
+	     "a":"have"},
+	    {"q":"We ______ a test next week.",
+	     "a":"has"},
+	    {"q":"They ______ a holiday every summer.",
+	     "a":"have"}
+	],
+	"help":"Use 'has' with 'he','she','it'/n
+Use 'have' with 'I','we,'us','you','they'./n
+Use 'has' with singular or uncountable subjects./n
+Use 'have' with plural subjects./n
+",
+	"helpurls":["https://www.ego4u.com/en/cram-up/grammar/simple-present/form"]
+    },
+    "ex5":
+    {
+	"question_prompt":"Make the sentence negative.",
+	"example":
+	{"question":"She has a new phone.",
+	 "answer":"She doesn't have a new phone."},
+	"questions":
+	[
+	    {"q":"I have two brothers.",
+	     "a":"I do not have two brothers./I don't have two brothers."},
+	    {"q":"He has a blue car.",
+	     "a":"He does not have a blue car./He doesn't have a blue car."},
+	    {"q":"Ali and Hamed have a class at 2pm.",
+	     "a":"Ali and Hamed do not have a class at 2pm./Ali and Hamed don't have a class at 2pm."},
+	    {"q":"You have long hair.",
+	     "a":"You do not have long hair./You don't have long hair."},
+	    {"q":"My sister has a lot of friends.",
+	     "a":"My sister does not have a lot of friends./My sister doesn't have a lot of friends."},
+	    {"q":"My friends have a lot of money.",
+	     "a":"My friends do not have a lot of money./My friends don't have a lot of money."},
+	    {"q":"Your aunt has a beautiful house.",
+	     "a":"Your aunt does not have a beautiful house./Your aunt doesn't have a beautiful house."},
+	    {"q":"Those dogs have sharp teeth.",
+	     "a":"Those dogs do not have sharp teeth./Those dogs don't have sharp teeth."},
+	    {"q":"Your teacher has a big nose.",
+	     "a":"Your teacher does not have a big nose./Your teacher doesn't have a big nose."},
+	    {"q":"I have an idea.",
+	     "a":"I do not have an idea./I don't have an idea."},
+	    {"q":"My phone has a cracked screen.",
+	     "a":"My phone does not have a cracked screen./My phone doesn't have a cracked screen."},
+	    {"q":"Julie has a terrible voice.",
+	     "a":"Julie does not have a terrible voice./Julie doesn't have a terrible voice."},
+	    {"q":"The students have headaches.",
+	     "a":"The students do not have headaches./The students don't have headaches."},
+	    {"q":"Laila has too much homework.",
+	     "a":"Laila does not have too much homework./Laila doesn't have too much homework."},
+	    {"q":"They have a meeting at 2pm.",
+	     "a":"They do not have a meeting at 2pm./They don't have a meeting at 2pm."},
+	    {"q":"John has a shower every morning.",
+	     "a":"John does not have a shower every morning./John doesn't have a shower every morning."},
+	    {"q":"My brother and I have eggs for breakfast.",
+	     "a":"My brother and I do not have eggs for breakfast./My brother and I don't have eggs for breakfast."},
+	    {"q":"Terry and Dana's house has a lovely garden.",
+	     "a":"Terry and Dana's house does not have a lovely garden./Terry and Dana's house doesn't have a lovely garden."},
+	    {"q":"We have a test next week.",
+	     "a":"We do not have a test next week./We don't have a test next week."},
+	    {"q":"They have a holiday every summer.",
+	     "a":"They do not have a holiday every summer./They don't have a holiday every summer."},
+	],
+	"help":"Change 'have' to 'do not have' or change 'has' to 'does not have'.",
+	"helpurls":"https://www.ego4u.com/en/cram-up/grammar/simple-present/form"
+    },
+    "ex6":
+    {
+	"question_prompt":"Make the sentence negative.",
+	"example":
+	{"question":"She has a new phone.",
+	 "answer":"She doesn't have a new phone."},
+	"questions":
+	[
+	    {"q":"I have two brothers.",
+             "a":"Do I have two brothers?/Do you have two brothers?"},
+	    {"q":"He has a blue car.",
+	     "a":"Does he have a blue car?"},
+	    {"q":"Ali and Hamed have a class at 2pm.",
+	     "a":"Do Ali and Hamed have a class at 2pm?"},
+	    {"q":"You have long hair.",
+	     "a":"Do you have long hair?/Do I have long hair?"},
+	    {"q":"My sister has a lot of friends.",
+	     "a":"Does my sister have a lot of friends?/Does your sister have a lot of friends?"},
+	    {"q":"My friends have a lot of money.",
+	     "a":"Do my friends have a lot of money?Do your friends have a lot of money?"},
+	    {"q":"Your aunt has a beautiful house.",
+	     "a":"Does your aunt have a beautiful house?/Does my aunt have a beautiful house?"},
+	    {"q":"Those dogs have sharp teeth.",
+	     "a":"Do those dogs have sharp teeth?"},
+	    {"q":"Your teacher has a big nose.",
+	     "a":"Does your teacher have a big nose?/Does my teacher have a big nose?"},
+	    {"q":"I have an idea.",
+	     "a":"Do I have an idea?/Do you have an idea?"},
+	    {"q":"My phone has a cracked screen.",
+	     "a":"Does my phone have a cracked screen?/Does your phone have a cracked screen?"},
+	    {"q":"Julie has a terrible voice.",
+	     "a":"Does Julie have a terrible voice?"},
+	    {"q":"The students have headaches.",
+	     "a":"Do the students have headaches?"},
+	    {"q":"Laila has too much homework.",
+	     "a":"Does Laila have too much homework?"},
+	    {"q":"They have a meeting at 2pm.",
+	     "a":"Do they have a meeting at 2pm?"},
+	    {"q":"John has a shower every morning.",
+	     "a":"Does John have a shower every morning?"},
+	    {"q":"My brother and I have eggs for breakfast.",
+	     "a":"Do my brother and I have eggs for breakfast?/Do your brother and you have eggs for breakfast?"},
+	    {"q":"Terry and Dana's house has a lovely garden.",
+	     "a":"Does Terry and Dana's house have a lovely garden?"},
+	    {"q":"We have a test next week.",
+	     "a":"Do we have a test next week?"},
+	    {"q":"They have a holiday every summer.",
+	     "a":"Do they have a holiday every summer?"}
+	],
+	"help":"If the sentence uses 'have', add 'do' to the begining of the sentence./n
+If the sentence uses 'has', change 'has' to 'have' and add 'does' to the begining of the sentence./n
+Change the full stop to a question mark./n",
+	"helpurls":["https://www.ego4u.com/en/cram-up/grammar/simple-present/form"]
+    },
+    "ex7":
+    {
+	"question_prompt":"Put the words in the correct order. ",
+	"example":
+	{"question":"/ can / I / English / speak /.",
+	 "answer":"I can speak English."},
+	"questions":
+	[
+	    {"q":"play/can/I/guitar/.",
+	     "a":"I can play guitar."},
+	    {"q":"English/can/You/read/books/.",
+	     "a":"You can read English books."},
+	    {"q":"He/pictures/paint/beautiful/can/./",
+	     "a":"He can paint beautiful pictures."},
+	    {"q":"help/you/can/I/.",
+	     "a":"I can help you."},
+	    {"q":"We/to/go/can/tomorrow/beach/the/./",
+	     "a":"We can go to the beach tomorrow."},
+	    {"q":"good/take/Phones/can/photos/./",
+	     "a":"Phones can take good photos."},
+	    {"q":"can/funny/Steven/make/a/face/./",
+	     "a":"Steven can make a funny face."},
+	    {"q":"Asmahan/her/not/find/can/phone/./",
+	     "a":"Asmahan can not find her phone./Asmahan cannot find her phone./Asmahan can't find her phone."},
+	    {"q":"spicy/can/not/eat/Jane/food/.",
+	     "a":"Jane can not eat spicy food./Jane cannot eat spicy food./Jane can't eat spicy food."},
+	    {"q":"not/can/Tom/dance/.",
+	     "a":"Tom can not dance./Tom cannot dance./Tom can't dance."},
+	    {"q":"can/drive/not/Sheama/a/car/./",
+	     "a":"Sheama can not drive a car./Sheama cannot drive a car./Sheama can't drive a car."},
+	    {"q":"a/she/ride/Can/bicyle/?",
+	     "a":"Can she ride a bicyle?"},
+	    {"q":"they/Can/swim/?",
+	     "a":"Can they swim?"},
+	    {"q":"you/Could/lend/me/some/money/?",
+	     "a":"Could you lend me some money?"},
+	    {"q":"have/more/homework/Can/I/?",
+	     "a":"Can I have more homework?"},
+	    {"q":"bathroom/I/go/to/the/Could/?",
+	     "a":"Could I go to the bathroom?"},
+	    {"q":"the/you/turn/air/on/conditioning/Could/?",
+	     "a":"Could you turn on the air conditioning?"},
+	    {"q":"home/Can/go/we/?",
+	     "a":"Can we go home?"},
+	    {"q":"he/sing/Can/?",
+	     "a":"Can he sing?"},
+	    {"q":"friends/your/cook/Can/?",
+	     "a":"Can your friends cook?"},
+	],
+	"help":"Use can or could between the subject and another verb (in it's base form)./n
+Use 'not' between 'can' and the verb for negatives./n
+Use 'can' or 'could' at the begining of the sentence for a question./n",
+	"helpurls":[
+	    "http://www.englisch-hilfen.de/en/grammar/can_cannot.htm",
+	    "http://learnenglish.britishcouncil.org/en/english-grammar/verbs/modal-verbs/ability-permission-requests-and-advice"
+	]
+    }
+}
+
