@@ -1,0 +1,284 @@
+html {overflow-y: scroll;}
+body, dic, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote {
+	margin: 0; padding: 0; border: 0;
+	}
+/* line height = 24px, gutter = 21px, width = 139px; */
+body {
+	font-family: "Helvetica", Arial, Sans-serif;
+	line-height: 24px;
+	/* background: #EDEDED; */
+	background-image: url(../images/bgnoise.gif);
+	}
+
+a {
+	color: #b02000; text-decoration:none;
+	font-size: 12px;
+	}
+a: hover {
+	color:#9e1d00;
+	}
+
+#upper {
+	width: 939px; margin: 0 auto; padding: 0 0 72px 0;
+	background: #dedede url(../images/bgnoise2.gif);
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	}
+
+
+#header{
+	overflow: hidden;
+	width: 299px;
+	height: 72px;
+	float: left;
+	background: #af2100;
+	}
+#title{	
+	font-size: 20px;
+	margin-top: 44px;
+	}
+
+#upper ul {
+float: right; 
+list-style: none; 
+margin: 0 20px 0 0;	
+}
+
+#upper ul li {
+	width:240px; 
+	margin:0 0 0 21px;
+	font-size: 14px;
+	text-align: right;
+	
+	}
+	#upper ul li a {
+		font-size: 14px;
+		
+		}
+
+#main{
+	width: 939px; 
+	margin: 0 auto; 
+	padding: 0 21px 0 21px;
+	
+	
+	}
+	
+	#main .post .porttit {
+font-size: 12px;
+
+
+}
+#main .post .port {
+	width: 619px;
+	}
+#main .post .content ul {
+float: left; 
+list-style: none; 
+margin: 0 0 0 70px;	
+width: 580px;
+}
+
+
+
+#main .post .content ul li {
+	width:70px; 
+	margin:0 10px 0 0px;
+	float: left;
+	text-align: left;
+	}
+#gainers ul {
+margin: 0 0 0 70px;
+}
+#gainers ul li {
+float: left;	
+width:70px;
+padding:0 25px 0 0;
+list-style: none; 	
+}
+	
+	#main ul li a {
+		font-size: 12px;
+		}	
+	
+	
+	
+	
+	h2 {
+		color: #b02000;
+		padding: 24px 0 24px 70px;
+		font: italic 20px "Georgia", Serif; margin: 0 0 0 0;
+		}
+ h3 {
+ 	font-family: "Helvetica", Arial, Sans-serif;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+		font-size: 12px;
+		color: #000000;
+font-weight: normal;
+	text-align: left;
+		}
+#main h3 a {
+	
+	
+	}
+#leftcol {
+	padding: 24px 0 0 0;
+	width: 619px;
+	float: left;
+	}
+	
+#leftcol .post {
+	width: 619px;
+	padding: 24px 0 24px 0;
+	overflow: hidden;
+		
+	}
+	#leftcol .postframe {
+		
+	width: 619px;
+	padding: 0 0 24px 0;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: #ededed;
+	
+	overflow: hidden;
+		
+		
+		
+		}
+	#leftcol .content {
+		width:619px;
+	padding: 0 0  0  0;
+	
+	float:left;
+		overflow: hidden;
+		}
+		#leftcol .post .details {
+			padding:48 21 0 0;
+			float:right;
+			text-align:right;
+			width:139px;
+			}
+		#leftcol .post .details ul {
+			list-style: none;
+			}
+		#leftcol .post .details ul li {
+			text-align:right;
+			color: #737373;
+			}	
+		#leftcol .post .details ul li a {
+			text-align:right;
+			color: #737373;
+			}
+			#leftcol .post .details ul li a:hover{
+				color: #aeaeae;
+				}
+#leftcol .post .extrainfo {
+		display: none;
+		float: left;
+		
+		
+		}
+		#leftcol .post .extrainfo ul {
+			padding: 24px 0 0 0;
+			width: 300px;
+			float: none;
+			list-style: none;
+			}
+		#leftcol .post .extrainfo ul li {
+			font-size: 12px;
+			float: none;
+			width: 300px;
+			text-align:left;
+			color: #737373;
+			}	
+		#leftcol .post .extrainfo .hist ul {	
+		padding: 0 0 0 70px;
+		float left;
+	margin: 0;
+	
+		}
+		
+		#leftcol .post .extrainfo {
+		padding: 0 0 24px 0;	
+			
+			}
+		#leftcol .post .unbuysell {
+			display: none;
+			}	
+#leftcol .post .extrainfo .hist ul {
+	color:#000000;
+	float: left;
+	margin: 0;
+	width:551px;
+	}		
+
+#leftcol .post .extrainfo .hist .val {
+display:inline;	
+	font-size: 14px;
+	}			
+#leftcol .post .extrainfo .hist ul li {
+	color:#000000;
+	float: left;
+padding-right: 10px;
+	width:140px;
+	}
+	#totalval {
+		margin:0 0 0 0;
+		padding:24px 0 0 390px;
+		float: left;
+		
+		}
+
+#rightcol {
+	margin: 48px 0 0 20px;
+	padding: 0 0 0 0;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	width:299px;
+	float: left;
+	
+background: #ededed url(../images/bgnoise3.gif);	
+	}
+	#rightcol .rightpost {
+	 padding-bottom:24px;
+		}
+#rightcol ul {
+list-style: none; 
+text-align: left;
+margin: 24px 0 0 21px;	
+}
+
+#quant {
+padding: 0 0 0 70px;	
+	
+}
+#quotei {
+	display: none;
+	}
+#quotelist .ql {
+	font-size: 12px;
+	float: left;
+	}
+	#quotelist .ql2 {
+		float: left;
+	
+	}
+	#quotei a {
+font-size: 12px;
+}
+#buyone {
+padding: 0 0 0 70px;	
+	}
+	
+#rightcol ul li {
+	padding: 0 0 24px 0;
+color: #000000;
+}
+#rightcol ul li a{
+color: #000000;
+}
+
+	

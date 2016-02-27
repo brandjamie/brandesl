@@ -1,0 +1,702 @@
+{
+    "id":"Unit 1",
+    "description":"Foundation Institute Elementary Level Unit 1",
+    "exercises":{"0":
+		 {
+		     "question_prompt":"Write the 3rd person singular form for these verbs.",
+		     "example":
+		     {
+			 "question":"I eat - She  _______.",
+			 "answer":"eats"
+		     },
+		     "questions":
+		     [
+			 {"q":"They go - It ________",
+			  "a":"goes"},
+			 {"q":"We study - He __________",
+			  "a":"studies"},
+			 {"q":"You watch - She ___________",
+			  "a":"watches"},
+			 {"q":"I play - He __________",
+			  "a":"plays"},
+			 {"q":"They make - She ________",
+			  "a":"makes"},
+			 {"q":"We do - He _________",
+			  "a":"does"},
+			 {"q":"You have - It _________",
+			  "a":"has"},
+			 {"q":"I fly - He _________",
+			  "a":"flies"},
+			 {"q":"They enjoy - She _______",
+			  "a":"enjoys"},
+			 {"q":"We drink - He _______",
+			  "a":"drinks"},
+			 {"q":"They run - It _____",
+			  "a":"runs"},
+			 {"q":"You wash - He ______",
+			  "a":"washes"},
+			 {"q":"We read - She _______",
+			  "a":"reads"},
+			 {"q":"They listen - It ________",
+			  "a":"listens"},
+			 {"q":"They taste - It ________",
+			  "a":"tastes"},
+			 {"q":"We fight - He ________",
+			  "a":"fights"},
+			 {"q":"I sit - She _______",
+			  "a":"sits"},
+			 {"q":"You hurry - He ______",
+			  "a":"hurries"},
+			 {"q":"We drive - She ______",
+			  "a":"drives"}
+		     ],
+		     "help":"For most verbs you can make the 3rd person singular form by adding 's' to the word. <br>e.g. eat - eats. <br>For nouns ending in 'ss', 'x','ch' or 'sh' you make the plural form by adding 'es'. <br>e.g. <br>'wish - wishes'<br>For nouns ending in a consonant + 'y' you can make the plural form by removing the 'y' and adding 'ies'.<br>e.g. <br>fly - flies<br>",
+		     "helpurls":["http://www.grammar.cl/Present/Verbs_Third_Person.htm"]
+		 },
+		 "1":{
+		     "question_prompt":"Use the correct form of the verb.",
+		     "example":{
+			 "question":"She _______ (study) English.",
+			 "answer":"studies"
+		     },
+		     "questions":
+			 [
+			     {"q":"My friend often _______ to Muscat.",
+			      "a":"goes"},
+			     {"q":"Your sister never ______ her homework.",
+			      "a":"does"},
+			     {"q":"We _____ pizza.",
+			      "a":"like"},
+			     {"q":"My brother and my sister both ______ cars.",
+			      "a":"have"},
+			     {"q":"They ________ too much coffee.",
+			      "a":"drink"},
+			     {"q":"My phone ______ good pictures.",
+			      "a":"takes"},
+			     {"q":"That boy always _______ to class late.",
+			      "a":"comes"},
+			     {"q":"We _____ to Dubai every summer.",
+			      "a":"fly"},
+			     {"q":"She ________ playing tennis.",
+			      "a":"enjoys"},
+			     {"q":"Film stars ______ lots of money.",
+			      "a":"make"},
+			     {"q":"He _________ television every night.",
+			      "a":"watches"},
+			     {"q":"The girls outside the house _______.",
+			      "a":"sing"},
+			     {"q":"The wheels on the bus _____ round and round.",
+			      "a":"go"},
+			     {"q":"A young puppy __________ the hill.",
+			      "a":"climbs"},
+			     {"q":"The phone ________ in the middle of the night.",
+			      "a":"rings"},
+			     {"q":"A tree _______ in the forest.",
+			      "a":"falls"},
+			     {"q":"No one _______ the tree fall in the forest.",
+			      "a":"hears"},
+			     {"q":"Everybody ________ to rule the world.",
+			      "a":"wants"},
+			     {"q":"Everyone ________ to eat.",
+			      "a":"needs"},
+			     {"q":"Someone _____ a secret.",
+			      "a":"has"}
+			 ],
+			 "help":"Use the base (infinitive) form of the verb with 'I', 'you', 'we','they' and plural subjects'. <br>e.g.<br>We eat rice. Use the 3rd person singular form of the verb with 'He', 'She' and singular subjects. <br>e.g.<br>He eats rice.",
+			 "helpurls":[
+			     "http://www.elearnenglishlanguage.com/blog/learn-english/grammar/simple-present/",
+			     "http://www.englishpage.com/verbpage/simplepresentforms.html"
+			     ]
+		     },
+		     "2":
+		     {
+			 "question_prompt":"Make the sentence negative.",
+			 "example":{
+			     "question":"He eats rice.",
+			     "answer":"He does not eat rice."
+			 },
+			 "questions":
+			 [
+			     {"a":"My friend often goes to Muscat.",
+			      "q":"My friend doesn't often go to Muscat./My friend does not often go to Muscat."},
+			     {"q":"Your sister does her homework.",
+			      "a":"Your sister doesn't do her homework./Your sister doesn't do her homework."},
+			     {"q":"We like pizza.",
+			      "a":"We don't like pizza./We do not like pizza."},
+			     {"q":"My brother and my sister have cars.",
+			      "a":"My brother and my sister don't have cars./My brother and my sister do not have cars."},
+			     {"q":"They drink a lot of coffee.",
+			      "a":"They don't drink a lot of coffee./They do not drink a lot of coffee."},
+			     {"q":"My phone takes good pictures.",
+			      "a":"My phone does not take good pictures./My phone doesn't take good pictures."},
+			     {"q":"That boy always comes to class late.",
+			      "a":"That boy doesn't always comes to class late./That boy does not always comes to class late."},
+			     {"q":"We fly to Dubai every summer.",
+			      "a":"We don't fly to Dubai every summer./We do not fly to Dubai every summer."},
+			     {"q":"She enjoys playing tennis.",
+			      "a":"She doesn't enjoy playing tennis./She does not enjoy playing tennis."},
+			     {"q":"Film stars have lots of money.",
+			      "a":"Film stars don't have lots of money./Film stars do not have lots of money./Film stars don't have a lot of money./Film stars don't have a lot of money."},
+			     {"q":"He watches television every night.",
+			      "a":"He doesn't watch television every night./He does not watch television every night."},
+			     {"q":"The girls outside the house sing.",
+			      "a":"The girls outside the house don't sing./The girls outside the house do not sing."},
+			     {"q":"The wheels on the bus go round.",
+			      "a":"The wheels on the bus don't go round./The wheels on the bus do not go round."},
+			     {"q":"The young puppy climbs the hill.",
+			      "a":"The young puppy doesn't climb the hill./The young puppy does not climb the hill."},
+			     {"q":"The phone rings in the middle of the night.",
+			      "a":"The phone doesn't ring in the middle of the night./The phone does not ring in the middle of the night."},
+			     {"q":"A tree falls in the forest.",
+			      "a":"A tree doesn't fall in the forest./A tree does not fall in the forest."},
+			     {"q":"Simon hears the tree fall.",
+			      "a":"Simon doesn't hear the tree fall./Simon does not hear the tree fall."},
+			     {"q":"Mary wants to travel to Paris.",
+			      "a":"Mary does not want to travel to Paris./Mary doesn't want to travel to Paris."},
+			     {"q":"Sarah has two brothers.",
+			      "a":"Sarah doesn't have two brothers./Sarah does not have two brothers."},
+			     {"q":"Someone has a secret.",
+			      "a":"Someone doesn't have a secret./Someone does not have a secret."}
+			 ],
+			 "help":"Add 'don't' or 'do not' before the verb and change the verb to the infinitive if necessary.<br>e.g.<br>He eats rice. -> He doesn't eat rice.",
+			 "helpurls":[
+			     "http://www.grammar.cl/Present/To_Be.htm",
+			     "http://www.ecenglish.com/learnenglish/lessons/simple-present-tense-negative"
+			 ]
+		     },
+		     "3":
+		     {
+			 "question_prompt":"Make the sentence into a yes/no question.",
+			 "example":
+			 {
+			     "question":"She is a student.",
+			     "answer":"Is she a student?"
+			 },
+			 "questions":
+			 [
+
+			     {"q":"My friend often goes to Muscat.",
+			      "a":"Does my friend often go to Muscat?"},
+			     {"q":"Your sister does her homework.",
+			      "a":"Does your sister do her homework?"},
+			     {"q":"We like pizza.",
+			      "a":"Do we like pizza?"},
+			     {"q":"My brother and my sister have cars.",
+			      "a":"Do My brother and my sister have cars?"},
+			     {"q":"They drink a lot of coffee.",
+			      "a":"Do they drink a lot of coffee?/Do they drink lots of coffee?"},
+			     {"q":"My phone takes good pictures.",
+			      "a":"Does my phone take good pictures?/Does your phone take good pictures?"},
+			     {"q":"That boy always comes to class late.",
+			      "a":"Does that boy always come to class late?"},
+			     {"q":"We fly to Dubai every summer.",
+			      "a":"Do we fly to Dubai every summer?"},
+			     {"q":"She enjoys playing tennis.",
+			      "a":"Does she enjoy playing tennis?"},
+			     {"q":"Film stars have lots of money.",
+			      "a":"Do film stars don't have lots of money./Do film stars have a lot of money."},
+			     {"q":"He watches television every night.",
+			      "a":"Does he watch television every night?"},
+			     {"q":"The girls outside the house sing.",
+			      "a":"Do the girls outside the house sing?"},
+			     {"q":"The wheels on the bus go round.",
+			      "a":"Do the wheels on the bus go round?"},
+			     {"q":"The young puppy climbs the hill.",
+			      "a":"Does the young puppy climb the hill?"},
+			     {"q":"The phone rings in the middle of the night.",
+			      "a":"Does the phone ring in the middle of the night?"},
+			     {"q":"A tree falls in the forest.",
+			      "a":"Does a tree fall in the forest?"},
+			     {"q":"Simon hears the tree fall.",
+			      "a":"Does Simon hear the tree fall?"},
+			     {"q":"Mary wants to travel to Paris.",
+			      "a":"Does Mary want to travel to Paris?"},
+			     {"q":"Sarah has two brothers.",
+			      "a":"Does Sarah have two brothers?"},
+			     {"q":"Someone has a secret.",
+			      "a":"Does someone have a secret?"}
+			 ],
+			 "help":"To make a yes / no question , use the verb 'do' or 'does' at the begining of the sentence, change the verb to the infinitive if necessary and change the full stop to a question mark. <br>e.g.<br>He eats rice. -> Does he eat rice?",
+			 "helpurls":["http://www.grammar.cl/Present/To_Be.htm",
+			     "http://www.ecenglish.com/learnenglish/lessons/simple-present-tense-negative"]
+		     },
+		     "4":
+		     {
+			 "question_prompt":"Put the words in the correct order to make a sentence.",
+			 "example":
+			 {
+			     "question":"goes / early / he / home / always /.",
+			     "answer":"He always goes home early."
+			 },
+			 "questions":
+			 [
+			     {"q":"listen/radio/the/We/to/never/.",
+			      "a":"We never listen to the radio."},
+			     {"q":"restaurants/My/and/I/often/eat/family/at/.",
+			      "a":"My family and I often eat at restaurants."},
+			     {"q":"always/the/They/go/weekend/shopping/at/.",
+			      "a":"They always go shopping at the weekend."},
+			     {"q":"in/usually/the/reads/evenings/He/.",
+			      "a":"He usually reads in the evenings."},
+			     {"q":"up/stay/do/The/not/late/often/boys/.",
+			      "a":"The boys do not often stay up late."},
+			     {"q":"her/not/girl/bag/does/usually/The/forget/.",
+			      "a":"The girl does not usually forget her bag."},
+			     {"q":"sisters/dinner/always/My/cook/.",
+			      "a":"My sisters always cook dinner."},
+			     {"q":"tests/never/cheat/I/at/.",
+			      "a":"I never cheat at tests."},
+			     {"q":"early/always/up/Johnathan/gets/.",
+			      "a":"Johnathan always gets up early."},
+			     {"q":"plays/Martha/sometimes/tennis/.",
+			      "a":"Martha sometimes plays tennis."},
+			     {"q":"uses/often/Sarah/Facebook/.",
+			      "a":"Sarah often uses Facebook."},
+			     {"q":"the/often/We/don't/bus/catch/.",
+			      "a":"We don't often catch the bus."},
+			     {"q":"poetry/you/often/write/Do/?",
+			      "a":"Do you often write poetry?"},
+			     {"q":"milk/she/usually/Does/drink/?",
+			      "a":"Does she usually drink milk?"},
+			     {"q":"play/music/often/neighbor/Does/your/?",
+			      "a":"Does your neighbor often play music?"},
+			     {"q":"in/London/Andy/Rachel/live/Do/and/?",
+			      "a":"Do Andy and Rachel live in London?/Do Rachel and Andy live in London?"},
+			     {"q":"you/shopping/Where/usually/go/do/?",
+			      "a":"Where do you usually go shopping?"},
+			     {"q":"usually/start/does/time/class/What/your/?",
+			      "a":"What time does your class usually start?"},
+			     {"q":"English/often/How/speak/do/you/?",
+			      "a":"How often do you speak English?"},
+			     {"q":"cake/sometimes/make/We/.",
+			      "a":"We sometimes make cake."}
+			 ],
+
+			 "help":"Adverbs of frequency tell us how often something happens. They include 'always', 'sometimes','occasionally','often' and 'never'.<br>If the main verb is 'be' ('is','are' or 'am'), put adverb of frequency after the verb. <br>e.g.<br>He is often hungry. <br>If the main verb is not 'be' put the adverb of frequency before the verb.<br>She never eats meat. <br>'Sometimes' can also be used at the begining of a sentence (with a capital letter) or at the end of sentence after a comma.<br>e.g.<br>Sometimes it's hard to be a woman.<br>Everybody hurts, sometimes.",
+			 "helpurls":["http://www.grammar.cl/Basic/Adverbs_Frequency.htm",
+				     "https://learnenglishteens.britishcouncil.org/grammar-vocabulary/grammar-videos/adverbs-frequency"]
+		     },
+		     "5":
+		     {
+			 "question_prompt":"Choose the correct adverb of frequency.",
+			 "example":
+			 {
+			     "question":"Phil doesn't have a driving licence.<br>He ____________ drives to work.<br>always - usually - often - sometimes - never",
+			     "answer":"never"
+			 },
+			 "questions":[
+			     {"q":"I go to Dubai every weekend.<br>I __________ go to Dubai at the weekend.<br>always - usually - often - sometimes - never<br>",
+			      "a":"always"},
+			     {"q":"Most days she phones her Mum but today she is busy.<br>She _____________ phones her mum.<br><br>always - usually - often - sometimes - never<br>",
+			      "a":"usually"},
+			     {"q":"He usually takes the bus but _______________ he walks.<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes/often"},
+			     {"q":"Sometimes I drink Pepsi but _____________ I drink CocaCola.<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes/often/usually"},
+			     {"q":"She flies to Europe every two or three years.<br>She ____________ flies to Europe.<br>always - usually - often - sometimes - never<br>",
+			      "a":"often/sometimes"},
+			     {"q":"She has been swimming twice this month. She __________ goes swimming.<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes/often"},
+			     {"q":"I have eggs for breakfast once a week but the other days I have cereal.I ___________ have cereal.<br>always - usually - often - sometimes - never<br>",
+			      "a":"usually"},
+			     {"q":"He doesn't like cake but he eats it at special occasions.He _________ eats cake.<br>always - usually - often - sometimes - never<br>",
+			      "a":"often"},
+			     {"q":"They play football every Wednesday.<br>They _________ play football. <br>always - usually - often - sometimes - never<br>",
+			      "a":"always"},
+			     {"q":"We are vegetarians. We __________ eat meat.<br>always - usually - often - sometimes - never<br>",
+			      "a":"never"},
+			     {"q":"She doesn't have a television. She _________ watches televsion.<br>always - usually - often - sometimes - never<br>",
+			      "a":"never"},
+			     {"q":"Cats _________ have five legs<br>always - usually - often - sometimes - never<br>",
+			      "a":"never"},
+			     {"q":"Cats _________ have three legs<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes"},
+			     {"q":"Cats _________ have four legs<br>always - usually - often - sometimes - never<br>",
+			      "a":"usually/always"},
+			     {"q":"It _________ rains in Oman<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes"},
+			     {"q":"You can _________ see turtles on Masirah island.<br>always - usually - often - sometimes - never<br>",
+			      "a":"often/usually/sometimes"},
+			     {"q":"It is _____________ too cloudy to see the moon at night.<br>always - usually - often - sometimes - never<br>",
+			      "a":"sometimes/often/usually"},
+			     {"q":"Dolphins ___________ swim in wadis.<br>always - usually - often - sometimes - never<br>",
+			      "a":"never"},
+			     {"q":"Rain __________ falls upwards.<br>always - usually - often - sometimes - never<br>",
+			      "a":"never"},
+			     {"q":"The sun __________ rises in the East.<br>always - usually - often - sometimes - never<br>",
+			      "a":"always"}
+			 ],
+			 "help":"Choose the correct adverb of frequency according to how often something happens.<br>A rough guide would be:<br>Always : 100%<br>Usually : 80%<br>Often : 40%-70%<br>Sometimes : 10%-50%<br>Never : 0%<br>",
+			 "helpurls":[
+			     "http://www.grammar.cl/Basic/Adverbs_Frequency.htm",
+			     "https://learnenglishteens.britishcouncil.org/grammar-vocabulary/grammar-videos/adverbs-frequency"
+			 ]
+		     },
+		     "6":
+		     {
+			 "question_prompt":"Write the present participle (ing) form of the verb.",
+			 "example":
+			 {
+			     "question":"eat",
+			     "answer":"eating"
+			 },
+			 "questions":
+			 [
+			     {"q":"drive",
+			      "a":"driving"},
+			     {"q":"write",
+			      "a":"writing"},
+			     {"q":"make",
+			      "a":"making"},
+			     {"q":"play",
+			      "a":"playing"},
+			     {"q":"enjoy",
+			      "a":"enjoying"},
+			     {"q":"study",
+			      "a":"studying"},
+			     {"q":"lie",
+			      "a":"lying"},
+			     {"q":"tie",
+			      "a":"tying"},
+			     {"q":"drink",
+			      "a":"drinking"},
+			     {"q":"study",
+			      "a":"studying"},
+			     {"q":"have",
+			      "a":"having"},
+			     {"q":"be",
+			      "a":"being"},
+			     {"q":"do",
+			      "a":"doing"},
+			     {"q":"go",
+			      "a":"going"},
+			     {"q":"say",
+			      "a":"saying"},
+			     {"q":"get",
+			      "a":"getting"},
+			     {"q":"sit",
+			      "a":"sitting"},
+			     {"q":"box",
+			      "a":"boxing"},
+			     {"q":"clap",
+			      "a":"clapping"},
+			     {"q":"run",
+			      "a":"running"}
+			 ],
+			 "help":"If the word ends in 'x','y' or 'w' add 'ing'.<br>e.g.<br>draw - drawing<br>If the word ends in 'ie', delete the 'ie' and add 'ying'.<br>e.g.<br>die - dying<br>If the word ends with a silent 'e', delete the 'e' and add 'ing'.<br>e.g.<br>flee - fleeing.<br>If a one syllable word ends with a consonant, a vowel and another consonant, double the last consonant and add 'ing'.<br>e.g.<br>dig - digging<br>If a word with more than one syllable ends with a consonant, a vowel and another consonant, double the last consonant if the final syllable is stressed and add 'ing'.<br>e.g.<br>begin - beginning (stress is on the final syllable)<br>open - opening (stress is on the first syllable)<br>For all other verbs add 'ing'.<br><br>",
+			 "helpurls":[
+			     "http://www.studyenglishtoday.net/present-participle.html",
+			     "http://www.englishdailyworkout.com/2011/01/formation-of-present-participle.html"]
+		     },
+		     "7":
+		     {
+			 "question_prompt":"Complete the sentence using the present continuous.",
+			 "example":{
+			     "question":"She __________________(study) English.",
+			     "answer":"is studying"
+			 },
+			 "questions":
+			 [
+			     {"q":"He __________(speak) French.",
+			      "a":"is speaking"},
+			     {"q":"The boys  __________(go) to Muscat.",
+			      "a":"are going"},
+			     {"q":"The women __________(cook) dinner.",
+			      "a":"are cooking"},
+			     {"q":"My sister and her friend  __________(shop) for clothes.",
+			      "a":"are shopping"},
+			     {"q":"The man holding the books  __________(teach) maths.",
+			      "a":"is teaching"},
+			     {"q":"Your uncle __________(drive) his new car.",
+			      "a":"is driving"},
+			     {"q":"Your brother __________(drink) orange juice.",
+			      "a":"is drinking"},
+			     {"q":"I __________(have) breakfast.",
+			      "a":"am having"},
+			     {"q":"The girls  __________(enjoy) the movie.",
+			      "a":"are enjoying"},
+			     {"q":"The men  __________(play) computer games.",
+			      "a":"are playing"},
+			     {"q":"The girls  __________(enjoy) the movie.",
+			      "a":"are enjoying"},
+			     {"q":"The student  __________(sit) at the back of the class.",
+			      "a":"is sitting"},
+			     {"q":"My friends and I __________(make) plans for the weekend.",
+			      "a":"are making"},
+			     {"q":"The children __________(paint) pictures.",
+			      "a":"are painting"},
+			     {"q":"Those insects __________(eat) all the flowers.",
+			      "a":"are eating"},
+			     {"q":"The new restaurant __________(open) today.",
+			      "a":"is opening"},
+			     {"q":"A baby next door  __________(cry).",
+			      "a":"is crying"},
+			     {"q":"I __________(do) my homework.",
+			      "a":"am doing"},
+			     {"q":"She ____________(swim) in the sea.",
+			      "a":"is swimming"},
+			     {"q":"We ___________(have) so much fun today.",
+			      "a":"are having"}
+			 ],
+			 "help":"Use the verb 'to be' ('am','is' or 'are') with the present participle (ing).<br>e.g.<br>I _____(run) - I am running.",
+			 "helpurls":["http://www.edufind.com/english-grammar/present-continuous-tense/",
+				     "http://web2.uvcs.uvic.ca/elc/studyzone/330/grammar/pcont.htm"]
+		     },
+		     "8":
+		     {
+			 "question_prompt":"Make the sentence negative",
+			 "example":
+			 {
+			     "question":"He is reading.",
+			     "answer":"He is not reading."
+			 },
+			 "questions":
+			 [
+			     {"q":"They are playing chess.",
+			      "a":"They are not playing chess./They aren't playing chess./They're playing chess."},
+			     {"q":"The cars are driving slowly.",
+			      "a":"The cars are not driving slowly./The cars aren't driving slowly."},
+			     {"q":"My friends are eating pizza.",
+			      "a":"My friends are not eating pizza./My friends aren't eating pizza."},
+			     {"q":"We are studying German.",
+			      "a":"We are not studying German./We aren't studying German./We're studying German."},
+			     {"q":"She is watching a movie.",
+			      "a":"She is not watching a movie./She isn't watching a movie./She's watching a movie."},
+			     {"q":"I am drinking coffee.",
+			      "a":"I am not drinking coffee./I'm drinking coffee."},
+			     {"q":"Your brother is building a house.",
+			      "a":"Your brother is not building a house./Your brother isn't building a house."},
+			     {"q":"Their friend is working in Dubai.",
+			      "a":"Their friend is not working in Dubai./Their friend isn't working in Dubai."               },
+			     {"q":"Our teacher is marking the test.",
+			      "a":"Our teacher is not marking the test./Our teacher isn't marking the test."},
+			     {"q":"Hamed is browsing the internet.",
+			      "a":"Ham noted is not browsing the internet./Hamed isn't browsing the internet."},
+			     {"q":"Salwa and Suad are learning to drive.",
+			      "a":"Salwa and Suad are not learning to drive./Salwa and Suad aren't learning to drive."},
+			     {"q":"James is reading a book.",
+			      "a":"Jam notes is not reading a book./James isn't reading a book."},
+			     {"q":"Susan and Emma are speaking on the phone.",
+			      "a":"Susan and Emma are not speaking on the phone./Susan and Emma aren't speaking on the phone."},
+			     {"q":"You are doing well in this exercise.",
+			      "a":"You are not doing well in this not exercis note./You aren't doing well in thisn't exercisn'te./You're doing well in this exercise."},
+			     {"q":"Those people are buying food from Carrefour.",
+			      "a":"Those people are not buying food from Carrefour./Those people aren't buying food from Carrefour."},
+			     {"q":"The baby is sleeping.",
+			      "a":"The baby is not sleeping./The baby isn't sleeping."},
+			     {"q":"Those children are feeding the birds.",
+			      "a":"Those children are not feeding the birds./Those children aren't feeding the birds."},
+			     {"q":"The sun is shining.",
+			      "a":"The sun is not shining./The sun isn't shining."},
+			     {"q":"It is raining.",
+			      "a":"It is not raining./It isn't raining./It's raining."},
+			     {"q":"They are growing flowers in the garden.",
+			      "a":"They are not growing flowers in the garden./They aren't growing flowers in the garden./They're growing flowers in the garden."}
+			 ],
+			 "help":"Add 'not' after the verb 'be' ('am','is' or 'are') and before the present participle ('ing').<br>e.g.<br>He is sleeping. -> He is not sleeping.",
+			 "helpurls":["http://www.edufind.com/english-grammar/present-continuous-tense/",
+				     "http://web2.uvcs.uvic.ca/elc/studyzone/330/grammar/pcont.htm"]
+		     },
+		     "9":
+		     {
+			 "question_prompt":"Make the sentence into a yes/no question.",
+			 "example":
+			 {"question":"She is sleeping.",
+			  "answer":"Is she spleeping?"},
+			 "questions":
+			 [
+			     {"q":"They are playing chess.",
+			      "a":"Are they playing chess?"},
+			     {"q":"The cars are driving slowly.",
+			      "a":"Are the cars are driving slowly?"},
+			     {"q":"My friends are eating pizza.",
+			      "a":"Are my friends eating pizza?"},
+			     {"q":"We are studying German.",
+			      "a":"Are we studying German?"},
+			     {"q":"She is watching a movie.",
+			      "a":"Is she watching a movie?"},
+			     {"q":"I am drinking coffee.",
+			      "a":"Am I drinking coffee./Are you drinking coffee?"},
+			     {"q":"Your brother is building a house.",
+			      "a":"Is your brother building a house./Is my brother building a house?"},
+			     {"q":"Their friend is working in Dubai.",
+			      "a":"Is their friend working in Dubai?"},
+			     {"q":"Our teacher is marking the test.",
+			      "a":"Is our teacher marking the test?"},
+			     {"q":"Hamed is browsing the internet.",
+			      "a":"Is Hamed browsing the internet?"},
+			     {"q":"Salwa and Suad are learning to drive.",
+			      "a":"Are Salwa and Suad learning to drive?"},
+			     {"q":"James is reading a book.",
+			      "a":"Is James reading a book?"},
+			     {"q":"Susan and Emma are speaking on the phone.",
+			      "a":"Are Susan and Emma speaking on the phone?"},
+			     {"q":"You are doing well in this exercise.",
+			      "a":"Are you doing well in this exercise./Am I doing well in this exercise"},
+			     {"q":"Those people are buying food from Carrefour.",
+			      "a":"Are those people buying food from Carrefour?"},
+			     {"q":"The baby is sleeping.",
+			      "a":"Is the baby sleeping?"},
+			     {"q":"Those children are feeding the birds.",
+			      "a":"Are those children feeding the birds?"},
+			     {"q":"The sun is shining.",
+			      "a":"Is the sun shining?"},
+			     {"q":"It is raining.",
+			      "a":"Is it raining?"},
+			     {"q":"They are growing flowers in the garden.",
+			      "a":"Are they growing flowers in the garden?"}		 
+			 ],
+			 "help":"Make yes no questions by using the verb 'be' followed by the subject and the present participle ('ing') and changing the full stop to a question mark..<br>e.g.<br>He is reading. -> Is he reading?",
+			 "helpurls":["http://www.edufind.com/english-grammar/present-continuous-tense/",
+				     "http://web2.uvcs.uvic.ca/elc/studyzone/330/grammar/pcont.htm"]
+		     },
+		 "10":
+		 {
+		     	 "question_prompt":"Put the words in the correct order to make a sentence.",
+			 "example":
+			 {
+			     "question":"book / reading / He / a / reading /.",
+			     "answer":"He is reading a book."
+			 },
+			 "questions":
+		     [
+			 {"q":"are / book / reading / What / you / ?",
+			  "a":"What book are you reading?"},
+			 {"q":"in / two / There / boys / the / are / car / .",
+			  "a":"There are two boys in the car."},
+			 {"q":"goes / My / family / shopping / often / .",
+			  "a":"My family often goes shopping."},
+			 {"q":"for / is / Hussain / studying / an / exam / .",
+			  "a":"Hussain is studying for an exam."},
+			 {"q":"a / to / writing / you / am / letter / I / .",
+			  "a":"I am writing a letter to you."},
+			 {"q":"football / is / Playing / fun / .",
+			  "a":"Playing football is fun."},
+			 {"q":"game / brother / is / Your / the / watching / .",
+			  "a":"Your brother is watching the game."},
+			 {"q":"the / We / every / website / use / day / .",
+			  "a":"We use the website every day."},
+			 {"q":"car / The / is / driving / his / man / .",
+			  "a":"The man is driving his car."},
+			 {"q":"to / radio / children / listening / The / are / the / .",
+			  "a":"The children are listening to the radio."},
+			 {"q":"not / wearing / She / is / green / coat / a / .",
+			  "a":"She is not wearing a green coat."},
+			 {"q":"do / people / not / sing / often / The / songs / .",
+			  "a":"The people do not often sing songs."},
+			 {"q":"usually / do / you / Who / see / on / Wednesdays / ?",
+			  "a":"Who do you usually see on Wednesdays?"},
+			 {"q":"is / time / your / What / flight / ?",
+			  "a":"What time is your flight?"},
+			 {"q":"this / car / Whose / is / ?",
+			  "a":"Whose car is this?/Whose is this car?"},
+			 {"q":"do / your / you / do / When / homework / ?",
+			  "a":"When do you do your homework?"},
+			 {"q":"studying / are / here / you / Why / ?",
+			  "a":"Why are you studying here?"},
+			 {"q":"your / do / food / buy / Where / you / ?",
+			  "a":"Where do you buy your food?"},
+			 {"q":"speak / languages / you / What / can / ?",
+			  "a":"What languages can you speak?"},
+			 {"q":"are / you / What / your / carrying / bag / in / ?",
+			  "a":"What are you carrying in your bag?"}
+		     ],
+		     "help":"Put the words in the correct order.<br>Be sure to make a question if there is a question mark.",
+		     "helpurls":["http://dictionary.cambridge.org/us/grammar/british-grammar/questions-wh-questions",
+				 "http://www.ecenglish.com/learnenglish/how-use-wh-questions"]
+		 },
+		 "11":
+		 {
+		     "question_prompt":"Complete the sentence with the correct form of the verb",
+		     "example":
+		     {
+			 "question":"Today, we ______________(look) at the present tense.",
+			 "answer":"are looking"
+		     },
+		     "questions":
+		     [
+			 {"q":"At the moment Bob ____________(eat) dinner.",
+			  "a":"is eating"},
+			 {"q":"Rachel often ____________(go) to the gym.",
+			  "a":"goes"},
+			 {"q":"Martha and her friends _____________ (study) together every night.",
+			  "a":"study"},
+			 {"q":"Your father _____________(travel) abroad this month.",
+			  "a":"travelling/traveling"},
+			 {"q":"The weather ____________(get) hotter these days.",
+			  "a":"is getting"},
+			 {"q":"We never _____________ (forget) to do our homework.",
+			  "a":"forget"},
+			 {"q":"Shhh, the baby ___________(sleep)",
+			  "a":"is sleeping"},
+			 {"q":"The baby usually  ___________ (sleep) at 7 o clock.",
+			  "a":"sleeps"},
+			 {"q":"My teacher ____________(drink) coffee all the time.",
+			  "a":"drinks"},
+			 {"q":"The naughty students ____________(play) with their phones.",
+			  "a":"are playing"},
+			 {"q":"We ____________(see) my uncle on most Tuesdays.",
+			  "a":"see"},
+			 {"q":"Julie ______________(have) a shower at the moment.",
+			  "a":"is having"},
+			 {"q":"We _______________(have) two classes today.",
+			  "a":"have"},
+			 {"q":"What _______________(you / play) at the moment?",
+			  "a":"are you playing"},
+			 {"q":"Where _______________(he / go) at the weekends?",
+			  "a":"does he go"},
+			 {"q":"How often ______________(we / practice) reading?",
+			  "a":"do we practice"},
+			 {"q":"Why _____________(be / you) so tired today?",
+			  "a":"are you"},
+			 {"q":"Who _____________(you / message) now?",
+			  "a":"are you messaging"},
+			 {"q":"What ____________(he / buy) when he goes shopping?",
+			  "a":"does he buy"},
+			 {"q":"My friends and I normally _____________(eat) in the restaurant.",
+			  "a":"eat"}
+		     ],
+		     "help":"'Now', 'at the moment' 'today' 'this ...week,month or year', and 'these days' are clue words for the present continuous.<br>Adverbs of frequency, 'every...day,week, or month', and Mondays, Tuesdays etc are clue words for the present simple.<br>State verbs like 'feel' are not normally used inthe present continuous form.<br>'Have' can be used in the present continuous for thing we do or consume (i.e. 'lunch' or 'a bath' but not for possesion.",
+		     "helpurls":["https://www.ego4u.com/en/cram-up/grammar/simpre-prepro",
+				 "http://www.englishgrammarsecrets.com/presentsimpleorcontinuous/menu.php"]
+		 }
+		}
+}
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			   
+			 
+			     
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
