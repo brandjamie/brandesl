@@ -143,6 +143,7 @@ h3 {
     box-shadow:         inset 2px 2px 2px 0px rgba(55, 55, 55, 0.5);
 }
 .button{
+    cursor:pointer;
     float:right;
     margin: 12px;
     padding: 12px;

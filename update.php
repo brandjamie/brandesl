@@ -31,11 +31,9 @@ if (mysql_num_rows($result) == 0) {
   $sql = "INSERT INTO userstats (userexercise, user, studentnum, userid, unit, ex, locked, numcorrect, numanswers, beststreak, currentstreak) VALUES ('$index','$username','$studentnum','$userid','$unit','$ex','$locked','$numcorrect','$numanswers','$beststreak','$currentstreak')";
 
 } else {
-$sql = "UPDATE userstats SET locked='$locked', numcorrect='$numcorrect', currentstreak='$currentstreak', beststreak='$beststreak', numanswers='$numanswers' WHERE userexercise='$index'";
-
-
-
+$sql = "UPDATE userstats SET locked='$locked', numcorrect='$numcorrect', userid='$userid', studentnum='$studentnum', currentstreak='$currentstreak', beststreak='$beststreak', numanswers='$numanswers' WHERE userexercise='$index'";
 }
+
 $result = mysql_query($sql);
 
 

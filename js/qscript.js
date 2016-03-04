@@ -42,17 +42,20 @@ var initPage = function () {
     
 };
 var statsLoaded = function (statdata) {
-    $.each(statdata,function(unit,exercise) {
-	thisexercise = {}
-	if (!(unit in unitsstats)) {
-    	    unitsstats[unit] = {}
-	}
-	thisexercise['locked']= parseInt(exercise['locked']);
-	thisexercise['numcorrect'] = parseInt(exercise['numcorrect']);
-	thisexercise['numanswered'] = parseInt(exercise['numanswers']);
-	thisexercise['beststreak'] = parseInt(exercise['beststreak']);
-	thisexercise['currentstreak'] = parseInt (exercise['currentstreak']);
-		     unitsstats[unit][exercise['ex']] = thisexercise;
+    $.each(statdata,function(unit,exercises) {
+	$.each(exercises,function(exnum,exercise){
+	    thisexercise = {}
+	    if (!(unit in unitsstats)) {
+    		unitsstats[unit] = {}
+	    }
+	    thisexercise['locked']= parseInt(exercise['locked']);
+	    thisexercise['numcorrect'] = parseInt(exercise['numcorrect']);
+	    thisexercise['numanswered'] = parseInt(exercise['numanswers']);
+	    thisexercise['beststreak'] = parseInt(exercise['beststreak']);
+	    thisexercise['currentstreak'] = parseInt (exercise['currentstreak']);
+	    unitsstats[unit][exnum] = thisexercise;
+
+	});
 	updateunitdiv(unit);
 		     
     });
@@ -189,7 +192,10 @@ var enterquiz = function (unit,ex) {
     initquestions(unit,ex);
     currentex = unitsdata[unit]["exercises"][ex];
     divstring = "";
+  //  var wth =  "Exerc;lkj;ljise "+ex;
     divstring = divstring + "<div id='questionbox' style='display: none'><h2>"+unitsdata[unit]["id"]+" - Exercise "+ex+" :</h2>";
+   // divstring = divstring + "<div id='questionbox' style='display: none'><h2>"+unitsdata[unit]["id"]+" - "+wth+" :</h2>";
+  
     divstring = divstring + "<div id='description'>"+currentex["question_prompt"]+"</div>";
     //divstring = divstring + "<div id='help' class='button' onclick='showhelp()'>Help</div>"
     divstring = divstring + "<div id='help' class='button'>Help</div>"
@@ -218,16 +224,25 @@ var enterquiz = function (unit,ex) {
 //    exampleprompt.
     divstring2 = "<div id='exampleprompt'>EXAMPLE</div>"
     $('.unitdiv').fadeOut(400,function(){
-	$("#main").append(divstring);
-	 $("#help").click(showhelp);
-    $("body").append(divstring2);
-	example=true;
-	blinkExampleText();
-	$('#nextbutton').click(function () {startquiz()});
-	$("#questionbox").fadeIn(400)
+	if ($('#questionbox').length == 0) {
+	    $("#main").append(divstring);
+	    $("#help").click(showhelp);
+	    $("body").append(divstring2);
+	    example=true;
+	    blinkExampleText();
+	    $('#nextbutton').click(function () {nextbuttonpressed()});
+	    $("#questionbox").fadeIn(400)
+	}
     });
-  	$("#main").append(divstring);
-    updatestars(unit,ex);
+  updatestars(unit,ex);
+}
+var nextbuttonpressed = function () {
+    if (example == true) {
+	startquiz()
+    }
+    else {
+	submitanswer();
+    }
 }
 
 var updatestars = function (unit,ex) {
@@ -272,17 +287,26 @@ var shuffleqs = function () {
 }
 
 var startquiz = function () {
-    $('#nextbutton').unbind();
+//    $('#nextbutton').remove();
     
-    $('#nextbutton').click(function () {submitanswer()});
+
+  //  divstring = "<div id='nextbutton' class='button'>Next Questions</div>"
+  //  divstring = divstring + "</div>"
+  //  $("#main").append(divstring);
+  // //$('#nextbutton').unbind();
+    
+   // $('#nextbutton').click(function () {submitanswer()});
+    //$('#nextbutton').bind("touchstart",function () {submitanswer()});
     $('#nextbutton').html("Submit Answer");
    // $('#spacer').html("&nbsp");
     $('#exampleprompt').remove();
     example = false;
+    qanswered = false;
     nextquestion()
 }
 var submitanswer = function () {
     if (qanswered == false) {
+    
 	
 	answer = $('#questionainner').text();
 	answer = sanitiseanswer(answer);
@@ -303,6 +327,7 @@ var submitanswer = function () {
 	    updatestats(currentunit,currentexnum,true)
 	    correctans();
 	} else {
+	   // window.alert("asdfas");
 	    updatestats(currentunit,currentexnum,false)
    	    incorrectans(correctanswers[0]);
 	}
@@ -310,16 +335,16 @@ var submitanswer = function () {
     }
 }
 var correctans = function () {
-    divstring = "<div id='correctbox' onClick =>"
-    divstring = divstring + "CORRECT"
+    divstring = "<div id='correctbox' onClick=''>"
+    divstring = divstring + "CORRECT</div>"
     $("body").append(divstring);
     $("#correctbox").animate({fontSize:'10em'},"slow",function() {endcorrect()})
 }
 var incorrectans = function (correctans) {
-    divstring = "<div id='correctbox' onClick =>"
-    divstring = divstring + "WRONG!"
+    divstring = "<div id='correctbox' onClick=''>";
+    divstring = divstring + "WRONG!</div>";
     $("body").append(divstring);
-    $("#correctbox").animate({fontSize:'10em'},"slow",function() {showanswer(correctans)})
+    $("#correctbox").animate({fontSize:'10em'},"slow",function() {showanswer(correctans)});
     
 }
 
@@ -352,8 +377,9 @@ var moveToNextQ = function () {
     nextex = (parseInt(currentexnum)+1).toString();
     if (currentstats["currentstreak"] == 5) {
 	  if (unitsstats[currentunit][nextex]["locked"] == true) {
-	        unitsstats[currentunit][nextex]["locked"] = false;
-	      	levelup(nextex);
+	      unitsstats[currentunit][nextex]["locked"] = false;
+	      unlocknextsql(nextex);
+	      levelup(nextex);
 	    }
     } else {
     
@@ -405,7 +431,6 @@ var changelevel = function (newex) {
     $('#levelup').fadeOut(400,function(){
 	$('#levelup').remove();
     });
-    
     $('#questionbox').fadeOut(400,function(){
 	$('#questionbox').remove();
 	enterquiz(currentunit,newex);
@@ -466,38 +491,42 @@ var endhelp = function () {
 
 
 var updatesql = function () {
-    data = unitsstats[currentunit][currentexnum]
-    sqldata = {}
+    data = unitsstats[currentunit][currentexnum];
+    sqldata = {};
     sqldata["unit"]=currentunit;
     sqldata["ex"]=currentexnum;
-    sqldata["uid"]=uid;
+    sqldata["uid"]=JSON.stringify(uid);
     sqldata["name"]=student_name;
-    sqldata["studentnum"]=student_number;
-
+    sqldata["studentnum"]=JSON.stringify(student_number);
    sqldata["locked"] = JSON.stringify(data["locked"]);
    sqldata["numanswered"] = JSON.stringify(data["numanswered"]);
    sqldata["numcorrect"] = JSON.stringify(data["numcorrect"]);
    sqldata["beststreak"] = JSON.stringify(data["beststreak"]);
    sqldata["currentstreak"] = JSON.stringify(data["currentstreak"]);
-   sqldata["uid"] = JSON.stringify(data["uid"]);
-   sqldata["studentnum"] = JSON.stringify(data["studentnum"]);
-
-
-
+ //  sqldata["uid"] = JSON.stringify(data["uid"]);
+  //  sqldata["studentnum"] = JSON.stringify(data["studentnum"]);
     
- // $.ajax({
- //      url: "update.php",
- //      type: "post",
- //      data: data}); 
-
-  //  data = {"name":"jb"}
-
-    
-    $.post("update.php",sqldata);    
-//    $.get("update.php",data,function(data,status,xhr)
-//	  {
-//	      window.alert(data);
-//	  });
+   $.post("update.php",sqldata);
 }
+
+var unlocknextsql= function (nextex){
+data = unitsstats[currentunit][nextex]
+    sqldata = {}
+    sqldata["unit"]=currentunit;
+    sqldata["ex"]=nextex;
+    sqldata["uid"]=JSON.stringify(uid);
+    sqldata["name"]=student_name;
+    sqldata["studentnum"]=JSON.stringify(student_number);
+
+   sqldata["locked"] = JSON.stringify(data["locked"]);
+   sqldata["numanswered"] = JSON.stringify(data["numanswered"]);
+   sqldata["numcorrect"] = JSON.stringify(data["numcorrect"]);
+   sqldata["beststreak"] = JSON.stringify(data["beststreak"]);
+//   sqldata["currentstreak"] = JSON.stringify(data["currentstreak"]);
+//   sqldata["uid"] = JSON.stringify(data["uid"]);
+//   sqldata["studentnum"] = JSON.stringify(data["studentnum"]);
+    $.post("update.php",sqldata);    
+};
+	      
 
 initPage()

@@ -11,13 +11,16 @@ $result = mysql_query($sql);
 $data = array();
 while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
     $currrow = array();
-    $currrow['ex'] = $row['ex'];
+    if (!array_key_exists($row['unit'],$data)) {
+            $data[$row['unit']] = array();
+        }
+    //   $currrow['ex'] = $row['ex'];
     $currrow['locked'] = $row['locked'];
     $currrow['numcorrect'] = $row['numcorrect'];
     $currrow['numanswers'] = $row['numanswers'];
     $currrow['beststreak'] = $row['beststreak'];
     $currrow['currentstreak'] = $row['currentstreak'];
-    $data[$row['unit']] = $currrow;
+    $data[$row['unit']][$row['ex']] = $currrow;
       }
 
  

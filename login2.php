@@ -1,7 +1,7 @@
-<?
+\<?
 
     // require common code
-    require_once("common.php"); 
+        require_once("common.php"); 
 
     // escape username and password for safety
     $stunum = mysql_real_escape_string($_POST["stunum"]);
