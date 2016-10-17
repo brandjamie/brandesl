@@ -33,7 +33,9 @@
     </div>
           <div id="userinfo">
 	    <?php echo $_SESSION["student_name"]; ?></br>
-	    <?php echo $_SESSION["student_number"]; ?>
+	    <?php echo $_SESSION["student_number"]; ?><br>
+<div id="logout">      <a href="logout.php">Sign out</a></div>
+      
 	</div>
 
   </div>

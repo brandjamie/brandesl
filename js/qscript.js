@@ -13,7 +13,7 @@ $.ajaxSetup ({
    cache: false  
     });   
 //
-units = ["unit0","unit1"];
+units = ["unit0","unit1","unit2","unit3","unit4"];
 num_of_stars = 5;
 unitsdata = {}
 unitsstats = {}
@@ -28,7 +28,7 @@ example = false;
 
 var currentex;
 var currentexnum;
-var currentunit;
+var currentunit = 4;
 var initPage = function () {
     for (i = 0; i<units.length; i++) {
 	unitname = units[i]
@@ -41,6 +41,7 @@ var initPage = function () {
     $.post("getstats.php",sqldata,statsLoaded);    
     
 };
+var exercisetype = "open";
 var statsLoaded = function (statdata) {
     $.each(statdata,function(unit,exercises) {
 	$.each(exercises,function(exnum,exercise){
@@ -105,9 +106,13 @@ var makeunitstats = function (unit) {
 
 //update the unit divs after the json has loaded
 var updateunitdiv = function (unit) {
-    divstring = "<div id='title_"+unit+"'><h2>"+unitsdata[unit]["id"]+"</h2></div></div>";
+    divstring = "<div id='title_"+unit+"' onclick='toggleUnit(\""+unit+"\")'><h2>"+unitsdata[unit]["id"]+"</h2><div id='stats_"+unit+"'  class='statsbox'></div></div>";
   //  $("#title_"+unit).html("<h2>"+unitsdata[unit]["id"]+"</h2>");
-    
+    if ("unit"+currentunit.toString() == unit) {
+    divstring = divstring+"<div id='"+unit+"_exercises' >"
+    } else {
+    divstring = divstring+"<div id='"+unit+"_exercises' style='display:none'>"
+    }
     $.each(unitsdata[unit]["exercises"],function(key,exercise) {
 	divstring = divstring + "<div id='"+unit+"_"+key+"' class='exercise' onclick='checklock(\""+unit+"\",\""+key+"\")'><h3 class='exercise_name'>Exercise "+key+"</h3>"
 
@@ -118,7 +123,7 @@ var updateunitdiv = function (unit) {
 	} else {
 	 
 	    if (parseInt(unitsstats[unit][key]["beststreak"]) >= 5) {
-		divstring = divstring + "<div id ='"+unit+"_"+key+"bronze' class='medal'><img src='./img/bronzemedal.png' width='81px' height='150px' alt='bronzemedal'></div>"
+		divstring = divstring + "<div id ='"+unit+"_"+key+"bronze' class='medal'><img src='./img/bronzemedal.png' alt='bronzemedal'></div>"
 
 	    }
 	    
@@ -140,12 +145,54 @@ var updateunitdiv = function (unit) {
 	
 	
 	
+
 	
 	divstring = divstring + "</div>"
     });
+    divstring = divstring + "</div>"
     $("#"+unit).html(divstring);	
-
+    updateUnitStats(unit);
 };
+
+var updateUnitStats = function (unit) {
+    /// get int from unit name 
+    numofex = Object.keys(unitsstats[unit]).length
+    numofmedals = 0;
+    divstring = "";
+    for (i = 0; i<numofex; i++) {
+	if (unitsstats[unit][i]['beststreak'] >4) {
+	    divstring = divstring + "<div class='unitexmedal'><img src='./img/bronzemedal.png' alt='bronze'></div>"
+	    numofmedals = numofmedals +1;
+	}
+	
+    }
+    if (numofmedals == numofex) {
+	    divstring = divstring + "<div class='unitmedal'><img src='./img/silvermedal.png' alt='silver'></div>"
+
+
+    }
+   
+    $("#stats_"+unit).html(divstring);
+   
+}
+
+
+var toggleUnit = function(unit) {
+    unitdiv = "#"+unit+"_exercises";
+    //ustring = "#"+unitdiv+":visible"
+    
+    //if($(ustring).length == 0)
+    //{
+	//isn't visible - show
+//	window.alert("is visible");
+ //   } else {
+//is visible - hide
+	
+ //   }
+
+    $(unitdiv).slideToggle(400);
+    
+}
 
 var blinkExampleText = function() {
     $('#exampleprompt').fadeOut(500).fadeIn(500,function() {
@@ -155,6 +202,40 @@ var blinkExampleText = function() {
     });
 
 }
+var blinkMultiAnswer = function(answernum) {
+
+
+    if (answernum==0) {
+    $('#answera').fadeOut(500).fadeIn(500,function() {
+	if (example == true) {
+	    blinkMultiAnswer(answernum);
+	}
+    });
+    }
+    else if (answernum==1) {
+    $('#answerb').fadeOut(500).fadeIn(500,function() {
+	if (example == true) {
+	    blinkMultiAnswer(answernum);
+	}
+    });
+    }
+    else if (answernum==2) {
+    $('#answerc').fadeOut(500).fadeIn(500,function() {
+	if (example == true) {
+	    blinkMultiAnswer(answernum);
+	}
+    });
+    }
+    else if (answernum==3) {
+    $('#answerd').fadeOut(500).fadeIn(500,function() {
+	if (example == true) {
+	    blinkMultiAnswer(answernum);
+	}
+    });
+    }
+
+}
+
 
 
 //return to the main menu
@@ -177,6 +258,7 @@ var checklock = function (unit,ex) {
 	enterquiz(unit,ex);
     } else
     {
+	falseclick = 0;
 	showlocked();
 //	window.alert("This Exercise is locked!")
     }
@@ -191,6 +273,11 @@ var enterquiz = function (unit,ex) {
     endlocked();
     initquestions(unit,ex);
     currentex = unitsdata[unit]["exercises"][ex];
+    if ("question_type" in currentex) {
+	exercisetype = currentex["question_type"];
+    } else {
+	exercisetype = "open"
+    }
     divstring = "";
   //  var wth =  "Exerc;lkj;ljise "+ex;
     divstring = divstring + "<div id='questionbox' style='display: none'><h2>"+unitsdata[unit]["id"]+" - Exercise "+ex+" :</h2>";
@@ -216,23 +303,56 @@ var enterquiz = function (unit,ex) {
     divstring = divstring + "<div id='question'>";
     divstring = divstring + "<div id='questionq'><h3>"+currentex["example"]["question"]+"</h3></div>";
     divstring = divstring + "<div id='qdivider'></div>"
-    divstring = divstring + "<div id='questiona'><div id='questionainner'>"+currentex["example"]["answer"]+"</div></div>";
-    divstring = divstring + "</div>"
+
+    if (exercisetype == "open") {
+    
+	divstring = divstring + "<div id='questiona'><div id='questionainner'>"+currentex["example"]["answer"]+"</div></div>";
+	divstring = divstring + "</div>"
+    }
+    if (exercisetype == "multi"){
+	answers = getanswers(currentex["example"]["answer"])
+	correctanswer = 0;
+	for (i = 0; i <4; i=i+1) {
+	    if (answers[i]==currentex["example"]["answer"]) {
+		correctanswer = i;
+	    }
+	}
+	
+	divstring = divstring + "<div id='answera' class='multianswer'>"+answers[0]+"</div>"
+	divstring = divstring + "<div id='answerb' class='multianswer'>"+answers[1]+"</div>"
+	divstring = divstring + "<div id='answerc' class='multianswer'>"+answers[2]+"</div>"
+	divstring = divstring + "<div id='answerd' class='multianswer'>"+answers[3]+"</div>"
+    }    
     divstring = divstring + "<div id='nextbutton' class='button'>Start</div>"
     divstring = divstring + "</div>"
 
 //    exampleprompt.
     divstring2 = "<div id='exampleprompt'>EXAMPLE</div>"
+   
     $('.unitdiv').fadeOut(400,function(){
 	if ($('#questionbox').length == 0) {
 	    $("#main").append(divstring);
+       	    falseclick = 0;
 	    $("#help").click(showhelp);
 	    $("body").append(divstring2);
 	    example=true;
 	    blinkExampleText();
+	    if (exercisetype == "multi"){
+		blinkMultiAnswer(correctanswer);
+	    }
+            updatestars(unit,ex);
 	    $('#nextbutton').click(function () {nextbuttonpressed()});
 	    $("#questionbox").fadeIn(400)
+	    
 	}
+	$(document).click(function() {
+	if (falseclick > 0)
+	{
+	    startquiz()    }
+	else {
+	    falseclick = falseclick + 1;
+	}
+    });
     });
   updatestars(unit,ex);
 }
@@ -287,8 +407,10 @@ var shuffleqs = function () {
 }
 
 var startquiz = function () {
-//    $('#nextbutton').remove();
     
+
+    $(document).unbind();
+    falseclick = 0;
 
   //  divstring = "<div id='nextbutton' class='button'>Next Questions</div>"
   //  divstring = divstring + "</div>"
@@ -297,13 +419,56 @@ var startquiz = function () {
     
    // $('#nextbutton').click(function () {submitanswer()});
     //$('#nextbutton').bind("touchstart",function () {submitanswer()});
-    $('#nextbutton').html("Submit Answer");
+    if (exercisetype == "multi") {
+    $('#nextbutton').remove();
+    } else {
+        $('#nextbutton').html("Submit Answer");
+    }
    // $('#spacer').html("&nbsp");
     $('#exampleprompt').remove();
     example = false;
     qanswered = false;
     nextquestion()
 }
+var getanswers = function (correct_answer){
+answerlist = currentex["options"]
+    newanswerlist = [];
+    for (ans in answerlist) {
+	if (answerlist[ans] != correct_answer) {
+	    newanswerlist.push(answerlist[ans])
+	}
+    }
+    newanswerlist = shuffle(newanswerlist);
+    answers = [];
+//    window.alert(correct_answer)
+    for (i = 0; i<3; i=i+1) {
+	answers.push(newanswerlist[i])
+    }
+    answers.push(correct_answer)
+    answers = shuffle(answers);
+//    window.alert(answers)
+    return answers;
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 var submitanswer = function () {
     if (qanswered == false) {
     
@@ -334,6 +499,38 @@ var submitanswer = function () {
 	qanswered = true;	
     }
 }
+
+
+var submitmultianswer = function (answer) {
+    if (qanswered == false) {
+    
+	
+	correct = false;
+	
+	correctanswers = questions[questions.length-1]["a"];
+	correctanswers = correctanswers.split("/");
+
+	for (i = 0; i < correctanswers.length; i++) {
+	    correctanswer = sanitiseanswer(correctanswers[i]);
+
+	    
+	    if (answer == correctanswer) {
+		correct = true;
+	    }
+	}
+	if (correct == true) {
+	    updatestats(currentunit,currentexnum,true)
+	    correctans();
+	} else {
+	   // window.alert("asdfas");
+	    updatestats(currentunit,currentexnum,false)
+   	    incorrectans(correctanswers[0]);
+	}
+	qanswered = true;	
+    }
+}
+
+
 var correctans = function () {
     divstring = "<div id='correctbox' onClick=''>"
     divstring = divstring + "CORRECT</div>"
@@ -351,21 +548,45 @@ var incorrectans = function (correctans) {
 
 
 var showanswer = function (ans) {
+  $(document).click(function() {
+	if (falseclick > 0)
+	{
+	    endcorrect()    }
+	else {
+	    falseclick = falseclick + 1;
+	}
+    });
+
+
+    
 divstring = "<div id='showanswer' onClick ='endcorrect()'>The answer should have been: <br><h3>"+ans+"</h3><br>Continue...<br></div>"
     $("body").append(divstring);
 
 }
 var showlocked = function () {
     $('#showlocked').remove();
+       $(document).click(function() {
+	if (falseclick > 0)
+	{
+	    endlocked()    }
+	else {
+	    falseclick = falseclick + 1;
+	}
+    });
+
 divstring = "<div id='showlocked' class='message' onClick ='endlocked()' ><h3>This exercise is locked</h3></div>"
     $("body").append(divstring);
 
 }
 var endlocked = function() {
+     $(document).unbind();
+    falseclick = 0;
     $("#showlocked").fadeOut("slow",function() {$('#showlocked').remove();})
 }
 
 var endcorrect = function () {
+     $(document).unbind();
+    falseclick = 0;
     $("#correctbox").fadeOut("slow",function() {$('#correctbox').remove();})
     $("#showanswer").fadeOut("slow",function() {$('#showanswer').remove();})
     moveToNextQ();
@@ -376,11 +597,25 @@ var moveToNextQ = function () {
     qanswered = false;
     nextex = (parseInt(currentexnum)+1).toString();
     if (currentstats["currentstreak"] == 5) {
+	//next exercise exists and is locked
+	if (unitsstats[currentunit][nextex]) {
 	  if (unitsstats[currentunit][nextex]["locked"] == true) {
 	      unitsstats[currentunit][nextex]["locked"] = false;
 	      unlocknextsql(nextex);
-	      levelup(nextex);
+	      levelup(nextex,true);
+	  }
+	    // next exercise exists and is not locked
+	    else {
+		levelup(nextex,false);
+
 	    }
+
+	    
+	}
+	/// next exercise does not exist.
+	else {
+	    unitup(currentunit);
+	}
     } else {
     
     nextquestion();
@@ -409,15 +644,45 @@ var updatestats = function (unit,ex,result) {
     updatesql();
 }
 
-var levelup = function (nextex) {
+var levelup = function (nextex,firsttime) {
+    divstring = "";
+    if (firsttime == true) {
+	divstring = divstring + "<div id='levelup'>You have unlocked the next level and won a medal.<br>";
+	divstring = divstring + "<div id='levelupexmedal'><img src='./img/bronzemedal.png' width='41px' height='50px' alt='bronzemedal'>    </div>";
+    } else {
+	divstring = divstring + "<div id='levelup'>You have completed this level.<br>";
 
-    divstring = "<div id='levelup'>You have unlocked the next level.<br>"
-    divstring = divstring + "<div id='nextlevel' class='option' onclick='changelevel(\""+nextex+"\")'> Move to the next level </div>"
-    divstring = divstring + "<div id='continuelevel' class='option' onclick='continuelevel()'> Continue on this level </div>"
-    divstring = divstring + "<div id='returntomenu' class='option' onclick='mainmenu()'> Return to the Main Menu </div>"
+    }
+
+    
+    divstring = divstring + "<div id='nextlevel' class='option' onclick='changelevel(\""+nextex+"\")'> Move to the next level <div style='icon'><img src='./img/forward.png' alt='next level'>  </div> </div>"
+    divstring = divstring + "<div id='continuelevel' class='option' onclick='continuelevel()'> Continue on this level  <div style='icon'><img src='./img/return.png' alt='replay'>  </div></div>"
+    divstring = divstring + "<div id='returntomenu' class='option' onclick='mainmenu()'> Return to the Main Menu  <div style='icon'><img src='./img/home.png' alt='home'>  </div></div>"
     $("body").append(divstring);
   
 }
+
+var unitup = function (nextex) {
+    divstring = "";
+    
+	divstring = divstring + "<div id='levelup'>You have completed this unit and won two medals.<br>";
+	divstring = divstring + "<div id='unitupexmedal'><img src='./img/silvermedal.png' width='41px' height='50px' alt='silvermedal'>    </div>";
+	divstring = divstring + "<div id='unitupexmedal'><img src='./img/bronzemedal.png' width='41px' height='50px' alt='bronzemedal'>    </div>";   
+  
+  
+    divstring = divstring + "<div id='continuelevel' class='option' onclick='continuelevel()'> Continue on this level  <div style='icon'><img src='./img/return.png' alt='replay'>  </div></div>"
+    divstring = divstring + "<div id='returntomenu' class='option' onclick='mainmenu()'> Return to the Main Menu  <div style='icon'><img src='./img/home.png' alt='home'>  </div></div>"
+    $("body").append(divstring);
+  
+}
+
+
+
+
+
+
+
+
 
 var continuelevel = function () {
     $('#levelup').fadeOut(400,function(){
@@ -460,13 +725,33 @@ var sanitiseanswer = function (answer) {
     return newanswer
 }
 var nextquestion = function () {
+    if (questions.length<=1) {
+	initquestions(currentunit,currentexnum);
+    }
     $('#questionq').html("<h3>"+questions[questions.length-1]["q"]+"</h3>");
+    if (exercisetype == "multi") {
+	correctanswers = questions[questions.length-1]["a"];
+	answers = getanswers(correctanswers)
+	$('#answera').html(answers[0]);
+	$('#answerb').html(answers[1]);
+	$('#answerc').html(answers[2]);
+	$('#answerd').html(answers[3]);
+	    $('#answera').click(function () {submitmultianswer(answers[0])});
+	    $('#answerb').click(function () {submitmultianswer(answers[1])});
+	    $('#answerc').click(function () {submitmultianswer(answers[2])});
+	    $('#answerd').click(function () {submitmultianswer(answers[3])});
+
+	
+    } else {
+   
     $('#questiona').html("<div id='questionainner' contenteditable>&nbsp</div>");
-    $('#questionainner').focus();
+	$('#questionainner').focus();
+    }
 }
 
 var showhelp = function () {
-//    $(document).bind("click",function() {endhelp()    });
+    //    $(document).bind("click",function() {endhelp()    });
+    if ($('#showhelp').length == 0) {
     $(document).click(function() {
 	if (falseclick > 0)
 	{
@@ -475,12 +760,12 @@ var showhelp = function () {
 	    falseclick = falseclick + 1;
 	}
     });
-
+    
     divstring = "<div id='showhelp'><h3>"
     divstring = divstring+unitsdata[currentunit]["exercises"][currentexnum]["question_prompt"] +"</h3><br>"
     divstring = divstring+unitsdata[currentunit]["exercises"][currentexnum]["help"]+"</div>"
     $("body").append(divstring);
-      
+    }  
 }
 
 var endhelp = function () {

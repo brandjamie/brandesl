@@ -27,6 +27,8 @@
     // else report error
     else
     {
-          redirect("registerb.php");
+            redirect("registerb.php?num={$stunum}");
+            //    apologize("Number not found!");
+
     }
 ?>

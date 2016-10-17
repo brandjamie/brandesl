@@ -4,10 +4,13 @@
     require_once("common.php");
 
     // log out current user (if any)
-    logout();
+//  logout();
 
-?>
+$stunum = mysql_real_escape_string($_GET["num"]);
 
+
+
+$htmlstring = '
 <!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -40,7 +43,11 @@
         <table border="0">
           <tr>
             <td class="field">Student Number:</td>
-            <td><input name="stunum" type="text" /></td>
+        <td><input name="stunum" type="text" value ="';
+
+$htmlstring = $htmlstring.$stunum;
+$htmlstring = $htmlstring.'" />
+          </td>
           </tr>
           <tr>
             <td class="field">Name</td>
@@ -74,3 +81,6 @@
   </body>
 
 </html>
+           ';
+echo $htmlstring;
+?>

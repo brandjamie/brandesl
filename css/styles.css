@@ -67,6 +67,7 @@ h3 {
 .unitdiv {
     padding: 0px 0px 24px;
     background: #ECECEC none repeat scroll 0% 0%;
+    margin:20px;
 }
 .exercise{
     margin: 24px;
@@ -152,6 +153,18 @@ h3 {
     -moz-box-shadow:    2px 2px 2px 0px rgba(55, 55, 55, 0.5);
     box-shadow:         2px 2px 2px 0px rgba(55, 55, 55, 0.5);
 }
+.multianswer{
+    cursor:pointer;
+    float:left;
+    margin: 12px;
+    padding: 12px;
+    background: #FEFEFE none repeat scroll 0% 0%;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(55, 55, 55, 0.5);
+    -moz-box-shadow:    2px 2px 2px 0px rgba(55, 55, 55, 0.5);
+    box-shadow:         2px 2px 2px 0px rgba(55, 55, 55, 0.5);
+}
+
+
 .button:hover {
     -webkit-box-shadow: 4px 4px 4px 0px rgba(55, 55, 55, 0.5);
     -moz-box-shadow:    4px 4px 4px 0px rgba(55, 55, 55, 0.5);
@@ -197,9 +210,9 @@ h3 {
 #levelup{
     position:absolute;
     top:15%;
-    width:400px;
-    margin-left:calc(50% - 200px);
-    padding-top:20px;
+    width:500px;
+    margin-left:calc(50% - 250px);
+    padding:30px;
     text-align:center;
     background: #FEFEFE none repeat scroll 0% 0%;
     -webkit-box-shadow: 2px 2px 2px 0px rgba(55, 55, 55, 0.5);
@@ -207,8 +220,8 @@ h3 {
     box-shadow:         2px 2px 2px 0px rgba(55, 55, 55, 0.5);
 }
 .option{
-    width:150px;
-    margin-left:calc(50% - 75px);
+    width:250px;
+    margin-left:calc(50% - 125px);
     margin-top:10px;
     margin-bottom:10px;		   
     -webkit-box-shadow: 2px 2px 2px 0px rgba(55, 55, 55, 0.5);
@@ -221,8 +234,8 @@ h3 {
 .message{
     position:fixed;
     top:30%;
-    left:50%
     width:400px;
+    padding:20px;
     margin-left:calc(50% - 200px);
    // margin-left:-200px;
 		   
@@ -247,4 +260,44 @@ h3 {
     width:600px;
     margin-left:calc(50% - 300px);
    
+}
+#logout{
+    font-size:0.5em;
+}
+
+.unitexmedal{
+    float:right;
+}
+
+.unitmedal {
+
+    float:right;
+}
+
+.statsbox {
+    display:inline;
+
+}
+.boardname {
+    display:inline-block;
+    width:300px;
+    margin-left:20px;
+    
+}
+.boardex {
+    display:inline-block;
+    width:200px;
+    font-size:0.75em;
+}
+.boardstreak {
+    display:inline-block;
+    width:200px;
+    font-size:0.75em;
+    
+    
+}
+.boardcurrstreak {
+    display:inline;
+    font-size:0.75em;
+    
 }
